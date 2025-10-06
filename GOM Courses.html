@@ -1,0 +1,499 @@
+<html>
+
+<head>
+    <title>Courses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {
+            border-width: medium;
+            border-style: solid;
+            border-color: blue;
+            padding: 10px;
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        p.redbox {
+            border-width: 20px solid red;
+            border-style: solid;
+            border-color: red;
+            padding: 10px;
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        p.bluebox {
+            border-width: 20px solid red;
+            border-style: solid;
+            border-color: red;
+            padding: 10px;
+            color: blue;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        tr:nth-child(even) {
+            background-color: LightGray;
+        }
+
+        tr {
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-style: solid;
+            margin-left: 10%;
+        }
+
+        table.one td {
+            text-align: center;
+            margin-left: 10%;
+        }
+
+        table td:nth-child(1) {
+            text-align: left;
+        }
+
+        table.two td:nth-child(2) {
+            text-align: left;
+        }
+
+        table.two td:nth-child(3) {
+            text-align: center;
+        }
+
+        th {
+            background-color: DarkBlue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="BlueBox">The Courses We Play</h1>
+
+    <p>The <i>Grumpy Old Men Golf Club</i> plays a number of different courses
+        in Northeast Tarrant County, Eastern Dallas County, and Southern Denton County.
+        The two tables below show (1) course metrics and (2) location and
+        contact information. Clicking on the course name will take you
+        to that course's website.
+
+    <p>It should be pointed out
+        that at the beginning of each year (or the end
+        of the previous year), courses and dates are <i>renegotiated.</i>
+        So this list may not always be current - some courses
+        may not be on the schedule for the coming year and others
+        may be new and not yet in this list.</p>
+
+    <h3>Course Metrics</h3>
+    <table border="3">
+        <tr>
+            <th colspan="1" scope="colgroup"></th>
+            <th colspan="4" scope="colgroup">Back Tees</th>
+            <th colspan="4" scope="colgroup">Forward Tees</th>
+        </tr>
+
+        <tr>
+            <th width="175px" text-align="left">Course Name</td>
+            <th width="75px">Color</td>
+            <th width="50px">Par</td>
+            <th width="50px">CR</td>
+            <th width="50px">Slope</td>
+            <th width="75px">Color</td>
+            <th width="50px">Par</td>
+            <th width="50px">CR</td>
+            <th width="50px">Slope</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Bridlewood</td>
+            <td>White</td>
+            <td>72</td>
+            <td>69.3</td>
+            <td>123</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>65.5</td>
+            <td>118</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Diamond Oaks</td>
+            <td>White</td>
+            <td>70</td>
+            <td>69.3</td>
+            <td>118</td>
+            <td>Green</td>
+            <td>70</td>
+            <td>67.0</td>
+            <td>113</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Fossil Creek</td>
+            <td>Gold</td>
+            <td>72</td>
+            <td>70.6</td>
+            <td>118</td>
+            <td>White</td>
+            <td>72</td>
+            <td>66.6</td>
+            <td>114</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Hawks Creek</td>
+            <td>White</td>
+            <td>72</td>
+            <td>69.6</td>
+            <td>127</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>66.2</td>
+            <td>119</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Iron Horse</td>
+            <td>Blue</td>
+            <td>70</td>
+            <td>68.6</td>
+            <td>119</td>
+            <td>Silver</td>
+            <td>70</td>
+            <td>66.0</td>
+            <td>114</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Irving Golf Club</td>
+            <td>Blue</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>White</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Luna Vista</td>
+            <td>White</td>
+            <td>72</td>
+            <td>70.4</td>
+            <td>124</td>
+            <td>Yellow</td>
+            <td>72</td>
+            <td>68.2</td>
+            <td>120</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Mansfield National</td>
+            <td>Silver</td>
+            <td>72</td>
+            <td>68.2</td>
+            <td>117</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>65.8</td>
+            <td>112</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Pecan Valley - Hills</td>
+            <td>White</td>
+            <td>72</td>
+            <td>68.8</td>
+            <td>118</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>65.9</td>
+            <td>103</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Pecan Valley - River</td>
+            <td>White</td>
+            <td>72</td>
+            <td>68.8</td>
+            <td>118</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>65.9</td>
+            <td>103</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Riverside</td>
+            <td>Silver</td>
+            <td>72</td>
+            <td>69.7</td>
+            <td>119</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>70.0</td>
+            <td>117</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Rockwood</td>
+            <td>White</td>
+            <td>72</td>
+            <td>69.1</td>
+            <td>113</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>66.2</td>
+            <td>109</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Sky Creek Ranch</td>
+            <td>Blue</td>
+            <td>72</td>
+            <td>70.7</td>
+            <td>128</td>
+            <td>White</td>
+            <td>72</td>
+            <td>68.6</td>
+            <td>117</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Southern Oaks</td>
+            <td>White</td>
+            <td>72</td>
+            <td>70.8</td>
+            <td>129</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>66.4</td>
+            <td>117</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Split Rail</td>
+            <td>White</td>
+            <td>72</td>
+            <td>70.0</td>
+            <td>124</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>66.3</td>
+            <td>117</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Squaw Creek</td>
+            <td>White</td>
+            <td>72</td>
+            <td>68.6</td>
+            <td>127</td>
+            <td>Gold</td>
+            <td>72</td>
+            <td>65.8</td>
+            <td>119</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Tangle Ridge</td>
+            <td>White</td>
+            <td>72</td>
+            <td>69.3</td>
+            <td>128</td>
+            <td>Red</td>
+            <td>72</td>
+            <td>65.8</td>
+            <td>121</td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Walnut Creek Pecan</td>
+            <td>White</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Red</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td text-align="left">Waterchase</td>
+            <td>White</td>
+            <td>72</td>
+            <td>68.2</td>
+            <td>123</td>
+            <td>Green</td>
+            <td>72</td>
+            <td>65.6</td>
+            <td>118</td>
+        </tr>
+
+    </table>
+
+    <h3>Course Contact Information</h3>
+    If you click on the Course Name, it will take you to its website.
+    You can get directions from their website.
+    Note that <i>Pecan Valley - Hills</i> and <i>Pecan Valley - River</i>
+    share the same website.</p>
+
+    <table border="3">
+
+        <tr>
+            <th width="175px">Course Name</th>
+            <th width="450px">Address</th>
+            <th width="120px">Phone Number</th>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.bridlewoodgolf.com">Bridlewood</a> </td>
+            <td text-align="left">4000 W. Windsor Drive, Flower Mound, TX 75028 </td>
+            <td>972-456-3200</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.diamondoaksclub.com">Diamond Oaks</a> </td>
+            <td text-align="left">5821 Diamond Oaks Dr. N, Ft. Worth, TX 76117 </td>
+            <td>972-355-4800</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.thegolfclubatfossilcreek.com">Fossil Creek </a></td>
+            <td text-align="left">3401 Clubgate Dr., Ft. Worth, TX 76137 </td>
+            <td>817-847-1900</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.hawkscreek.com">Hawks Creek </a></td>
+            <td> 6520 White Settlement Rd., Westworth Village, TX 76114 </td>
+            <td>817-738-8402</td>
+        </tr>
+
+
+        <tr>
+            <td text-align="left"><a href="http://www.ironhorsetx.com">Iron Horse </a> </td>
+            <td text-align="left">6200 Skylark Cir., North Richland Hills, TX 76180 </td>
+            <td>817-485-6666</td>
+        </tr>
+
+
+        <tr>
+            <td text-align="left"><a href="http://www.irvinggolfclub.org">Irving Golf Club </a> </td>
+            <td text-align="left">2000 E Shady Grove Rd, Irving, TX 75060</td>
+            <td>972-457-0772</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.lunavistagolf.com">Luna Vista </a> </td>
+            <td text-align="left">11223 Luna Rd, Dallas, TX 75229</td>
+            <td>214-670-6322</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.mansfield-national.com">Mansfield National </a> </td>
+            <td text-align="left">3750 National Pkwy, Mansfield TX 76063 </td>
+            <td>817-477-3366</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.fortworthgolf.org/golf/pecan-valley/">Pecan Valley Hills </a>
+            </td>
+            <td text-align="left">6400 Pecan Valley Drive Ft. Worth, TX 76132 </td>
+            <td>817-392-6490</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.fortworthgolf.org/golf/pecan-valley/">Pecan Valley River</a>
+            </td>
+            <td text-align="left">6400 Pecan Valley Drive Ft. Worth, TX 76132 </td>
+            <td>817-392-6490</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.playriverside.com">Riverside </a> </td>
+            <td> 3000 Riverside Pkwy, Grand Prairie, TX 75050 </td>
+            <td>817-640-7800</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.fortworthgolf.org/golf/rockwood-park/">Rockwood </a> </td>
+            <td text-align="left">1851 Jacksboro Hwy. Ft. Worth, TX 76114 </td>
+            <td>817-392-6560</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.skycreekranch.com">Sky Creek Ranch </a> </td>
+            <td text-align="left">600 Promontory Dr., Keller TX 76248 </td>
+            <td>817-498-1414</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.southernoaksgolf.com">Southern Oaks </a> </td>
+            <td text-align="left"> 13765 Southern Oaks Dr, Burleson TX 76028 </td>
+            <td>817-426-2400</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.splitrailgolf.com">Split Rail </a> </td>
+            <td text-align="left"> 2151 Old Annetta Road, Aledo, TX 76008 </td>
+            <td>817-441-4653</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.squaw-creek.com">Squaw Creek </a> </td>
+            <td text-align="left">1605 Ranch House Rd, Willow Park, TX 76087 </td>
+            <td>817-441-8185</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.tangleridge.com">Tangle Ridge </a> </td>
+            <td text-align="left">818 Tangle Ridge Dr, Cedar Hill, TX 75104 </td>
+            <td>972-299-6837</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.texasstargolf.com.com">Texas Star </a> </td>
+            <td text-align="left">1400 Texas Star Pkwy, Euless, TX 76040 </td>
+            <td>817-685-7888</td>
+        </tr>
+
+        <tr>
+            <td text-align="left"><a href="http://www.walnutcreekcc.com">WalnutCreekPecan</a> </td>
+            <td text-align="left">1151 Country Club Drive, Mansfield, TX 76063 </td>
+            <td>817-473-6114</td>
+        </tr>
+
+
+        <tr>
+            <td text-align="left"><a href="http://www.waterchasegc.com">Waterchase</a> </td>
+            <td text-align="left">8951 Creek Run Rd, Ft Worth, TX 76120 </td>
+            <td>817-861-4653</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
