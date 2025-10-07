@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <title></title>
+
+    <style>
+        fieldset {
+            display: inline-block;
+            width: 300px;
+            margin: 0 auto;
+            /* Center the fieldset */
+            padding: 20px;
+            /* Add space around the content of the fieldset */
+            text-align: left;
+            /* Center the content inside the fieldset */
+        }
+
+        legend {
+            margin-bottom: 20px;
+            text-align: center;
+            /* Add space below the legend */
+        }
+
+        div {
+            display: flex;
+        }
+
+        .button1:hover {
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Enter Scores</h1>
+
+    <p>Calls function which parses two 9-digit numbers into 18 1-digit scores.
+        Enter 0 for a hole score of 10. <br>
+        <b>Do not leave spaces between holes. Example: 534450345</b>
+    </p>
+
+    <p id="f9">345543456</p>
+    <p id="b9">543456554</p>
+
+    <div style="text-align:left"></div>
+
+    <form id='enterScores' action="">
+
+        <fieldset>
+            <legend>Enter Scores</legend>
+
+
+            <label for="fName"><b>First Name..</b></label>
+            <input id="fName" type="text" placeholder="First Name" size="25"> <br><br>
+
+            <label for="lName"><b>Last Name...</b></label>
+            <input id="lName" type="text" placeholder="Last Name" size="25"> <br><br>
+
+            <label for="pDate"><b>Play Date.....</b></label>
+            <input id="pDate" type="text" placeholder="mm-dd-yy" size="25"> <br><br>
+
+            <label for="Flight"><b>Flight...........</b></label>
+            <input id="Flight" type="text" placeholder="CH/A/B/C/D/E" size="25"> <br><br>
+
+            <label for="hCap"><b>Handicap.....</b></label>
+            <input id="hCap" type="text" placeholder="Handicap" size="25"> <br><br>
+
+            <label for="front9"><b>Front 9........</b></label>
+            <input id="front9" type="text" placeholder="1-9 Scores" size="25"> <br><br>
+
+            <label for="back9:"><b>Back 9.........</b></label>
+            <input id="back9" type="text" placeholder="10-18 Scores" size="25"> <br><br>
+
+            <br>
+            <button type="button" class="button1" onclick="getScores()">Submit</button>
+
+        </fieldset>
+        </div>
+
+    </form>
+
+
+    <script>
+
+        document.write("Before function");
+
+        const firstName = document.querySelector("#fName");
+        document.write(firstName);
+
+        function getScores() {
+            document.write("Beginning of function  ...  ");
+            let front9 = document.querySelector("#f9");
+            let back9 = document.QuerySelector("#b9");
+            //const firstName = document.querySelector("#fName");
+            document.write("End of function");
+            document.write(f9 + b9)
+            return (firstname);
+
+        };
+
+        document.write("After function");
+
+        document.write("First Name .... " + firstName);
+
+        //const front9 = '404365445';
+        //const back9 = '453556454';
+        const h01c = front9[0];
+        const h02c = front9[1];
+        const h03c = front9[2];
+        const h04c = front9[3];
+        const h05c = front9[4];
+        const h06c = front9[5];
+        const h07c = front9[6];
+        const h08c = front9[7];
+        const h09c = front9[8];
+
+        const h10c = back9[0];
+        const h11c = back9[1];
+        const h12c = back9[2];
+        const h13c = back9[3];
+        const h14c = back9[4];
+        const h15c = back9[5];
+        const h16c = back9[6];
+        const h17c = back9[7];
+        const h18c = back9[8];
+
+        h01 = Number(h01c);
+        h02 = Number(h02c);
+        h03 = Number(h03c);
+        h04 = Number(h04c);
+        h05 = Number(h05c);
+        h06 = Number(h06c);
+        h07 = Number(h07c);
+        h08 = Number(h08c);
+        h09 = Number(h09c);
+
+        h10 = Number(h10c);
+        h11 = Number(h11c);
+        h12 = Number(h12c);
+        h13 = Number(h13c);
+        h14 = Number(h14c);
+        h15 = Number(h15c);
+        h16 = Number(h16c);
+        h17 = Number(h17c);
+        h18 = Number(h18c);
+
+        if (h01 === 0) { h01 = 10 };
+        if (h02 === 0) { h02 = 10 };
+        if (h03 === 0) { h03 = 10 };
+        if (h04 === 0) { h04 = 10 };
+        if (h05 === 0) { h05 = 10 };
+        if (h06 === 0) { h06 = 10 };
+        if (h07 === 0) { h07 = 10 };
+        if (h08 === 0) { h08 = 10 };
+        if (h09 === 0) { h09 = 10 };
+
+        if (h10 === 0) { h10 = 10 };
+        if (h11 === 0) { h11 = 10 };
+        if (h12 === 0) { h12 = 10 };
+        if (h13 === 0) { h13 = 10 };
+        if (h14 === 0) { h14 = 10 };
+        if (h15 === 0) { h15 = 10 };
+        if (h16 === 0) { h16 = 10 };
+        if (h17 === 0) { h17 = 10 };
+        if (h18 === 0) { h18 = 10 };
+
+        let frontTotal = h01 + h02 + h03 + h04 + h05 + h06 + h07 + h08 + h09;
+        let backTotal = h10 + h11 + h12 + h13 + h14 + h15 + h16 + h17 + h18;
+        let total = frontTotal + backTotal;
+
+        let parf9 = [4, 3, 5, 4, 4, 5, 3, 4, 4];
+        let parb9 = [5, 4, 3, 5, 3, 4, 3, 4, 5];
+        let rtgf9 = [11, 15, 7, 13, 1, 3, 17, 5, 9];
+        let rtgb9 = [4, 10, 16, 6, 14, 12, 18, 2, 8];
+
+
+        let score = [h01, h02, h03];
+        let strokes = [1, 1, 0];
+        let net = score[0] - strokes[0];
+
+        let hcap = 12;
+        let hcbase = 0;
+        let strks = 0;
+
+        if (rtg[0] <= hcap) { strks = 1 };
+
+        document.write("Hi " + firstName)
+
+        document.write(" Strokes on Hole 1: " + strks)
+
+        document.write("  Sure hope it works!  ");
+
+        document.write("Front: " + frontTotal + "  Back: " + backTotal + " Total: " + total)
+
+        document.write(" Tricky part coming up!  ");
+
+        document.write(" Par: " + par[0]);
+        document.write(" Rtg: " + rtg[0]);
+        document.write(" Score: " + score[0]);
+        document.write(" Net: " + net);
+        document.write(" Strokes: " + strks);
+
+    </script>
+
+</body>
+
+</html>

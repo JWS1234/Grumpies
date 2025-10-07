@@ -1,0 +1,2785 @@
+<html>
+<title>SearchSort</title>
+<style>
+    h1 {
+        border-width: medium;
+        border-style: solid;
+        border-color: blue;
+        padding: 10px;
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    table {
+        margin-left: 10%;
+        border-collapse: collapse;
+    }
+
+    tr:nth-child(even) {
+        background-color: LightGray;
+    }
+
+    th {
+        background-color: DarkBlue;
+        color: white;
+        text-align: center;
+    }
+
+    th.center {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    td:nth-child(1) {
+        text-align: left;
+    }
+
+    td.left {
+        text-align: left;
+    }
+</style>
+<thead>
+
+
+
+</thead>
+
+<body>
+
+    <div class="table-wrap">
+        <h1>Who Are the Grumpy Old men?</h1>
+        <p>The table below shows a <i>Golf Profile</i> for each player
+            making up the <i><b>Grumpy Old Men Golf Club.</b></i>
+            To see the <i>Domestic Profile</i> (e.g. address,
+            phone number, etc.), click
+            <a href="https://www.google.sites.com/view/gom-golf-club/profile" </a>
+                <ul>
+                    <li>Every column in this table is <i><b>sortable</b></i>.
+                        Click on the column header once and it will reverse however it
+                        is currently sorted. Click again and it sorts back.</li>
+                    <li>For a two-column sort, click on the first column and then
+                        click on the second column. For example, to see all the <i>Every Monday</i>
+                        players alphabetically, click first on the <i>Name</i> column header then
+                        click on the <i>Mon?</i>vcolumn header. Try it, you'll figure it out.
+                    </li>
+
+                </ul>
+        </p>
+
+        <div>
+            <input class="searchInput" data-table-id="table1" type="search" placeholder="Search" aria-label="Search"
+                aria-target="table1">
+        </div>
+
+
+
+        <table class="sortTable" id="table1" border="3">
+
+            <thead>
+                <tr>
+                    <th width="150px">
+                        <button>
+                            Name
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px" aria-sort="ascending">
+                        <button>
+                            F/B
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center no-sort" width="50px">
+                        Index
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            Flight
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+
+                    <th class="center" width="50px">
+                        <button>
+                            Mon?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            Wed?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            LG?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            CTP?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            Skins?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="50px">
+                        <button>
+                            Smoker?
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+                    <th class="center" width="90px">
+                        <button>
+                            Last Played
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </th>
+
+                </tr>
+            </thead>
+
+
+            <!-- ******************************************************************** 
+Delete everything from the <tbody> tag below to the </tbody> tag.
+Then COPY the Excel "Players HTML" sheet from <tbody> to </tbody>
+and PASTE it just below these comments.   
+ ********************************************************************  -->
+
+
+            <tbody>
+                <tr>
+                    <td> Alexander,Andy </td>
+                    <td> B </td>
+                    <td> 7.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/03/24 </td>
+                </tr>
+                <tr>
+                    <td> Amend,Fred </td>
+                    <td> B </td>
+                    <td> 18.9 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/28/23 </td>
+                </tr>
+                <tr>
+                    <td> Ammons,Charles </td>
+                    <td> B </td>
+                    <td> 11.3 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/30/23 </td>
+                </tr>
+                <tr>
+                    <td> Arispe,Albert </td>
+                    <td> B </td>
+                    <td> 8.3 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/30/23 </td>
+                </tr>
+                <tr>
+                    <td> Armstrong,Louis </td>
+                    <td> F </td>
+                    <td> 24.6 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/20/23 </td>
+                </tr>
+                <tr>
+                    <td> Arning,Steve </td>
+                    <td> B </td>
+                    <td> 11.8 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/01/23 </td>
+                </tr>
+                <tr>
+                    <td> Bacharach,Howie </td>
+                    <td> B </td>
+                    <td> 15.0 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/01/19 </td>
+                </tr>
+                <tr>
+                    <td> Bailey,Bill </td>
+                    <td> B </td>
+                    <td> 5.3 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/28/21 </td>
+                </tr>
+                <tr>
+                    <td> Baker,Steve </td>
+                    <td> F </td>
+                    <td> 23.1 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/16/23 </td>
+                </tr>
+                <tr>
+                    <td> Ball,Brandon </td>
+                    <td> B </td>
+                    <td> 0.0 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/16/23 </td>
+                </tr>
+                <tr>
+                    <td> Barrere,Dennis </td>
+                    <td> B </td>
+                    <td> 32.8 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/23/23 </td>
+                </tr>
+                <tr>
+                    <td> Bates,Rick </td>
+                    <td> B </td>
+                    <td> 19.4 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 09/07/22 </td>
+                </tr>
+                <tr>
+                    <td> Beaird,Walter </td>
+                    <td> B </td>
+                    <td> 23.3 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 05/17/23 </td>
+                </tr>
+                <tr>
+                    <td> Becott,Jeff </td>
+                    <td> B </td>
+                    <td> 18.7M </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Bennett,Dennis </td>
+                    <td> B </td>
+                    <td> 25.6 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/18/23 </td>
+                </tr>
+                <tr>
+                    <td> Benson,Mark </td>
+                    <td> B </td>
+                    <td> 4.8 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Betancourt,Mike </td>
+                    <td> B </td>
+                    <td> 28.7 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/14/24 </td>
+                </tr>
+                <tr>
+                    <td> Bettingfeild,Will </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/03/23 </td>
+                </tr>
+                <tr>
+                    <td> Biddle,Ted </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 12/11/23 </td>
+                </tr>
+                <tr>
+                    <td> Blackwell,Doc </td>
+                    <td> B </td>
+                    <td> 21.6 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/01/23 </td>
+                </tr>
+                <tr>
+                    <td> Blakely,Dallas </td>
+                    <td> B </td>
+                    <td> 24.4 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/28/22 </td>
+                </tr>
+                <tr>
+                    <td> Bolen,Mike </td>
+                    <td> B </td>
+                    <td> 20.2 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 06/12/23 </td>
+                </tr>
+                <tr>
+                    <td> Bonacci,Hugo </td>
+                    <td> B </td>
+                    <td> 16.7 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/23/23 </td>
+                </tr>
+                <tr>
+                    <td> Boyle,Hugh </td>
+                    <td> F </td>
+                    <td> 26.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 12/12/22 </td>
+                </tr>
+                <tr>
+                    <td> Brigman,David </td>
+                    <td> B </td>
+                    <td> 15.5 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/14/22 </td>
+                </tr>
+                <tr>
+                    <td> Brockman,Jim </td>
+                    <td> B </td>
+                    <td> 13.9 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/15/23 </td>
+                </tr>
+                <tr>
+                    <td> Brown,Gregg </td>
+                    <td> B </td>
+                    <td> 13.9 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/15/23 </td>
+                </tr>
+                <tr>
+                    <td> Brown,Paul </td>
+                    <td> B </td>
+                    <td> 16.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/09/23 </td>
+                </tr>
+                <tr>
+                    <td> Brown,Tom </td>
+                    <td> F </td>
+                    <td> 34.5 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 03/27/23 </td>
+                </tr>
+                <tr>
+                    <td> Bunch,Robert </td>
+                    <td> B </td>
+                    <td> 14.4 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/15/23 </td>
+                </tr>
+                <tr>
+                    <td> Buss,Gene </td>
+                    <td> F </td>
+                    <td> 28.8 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/13/23 </td>
+                </tr>
+                <tr>
+                    <td> Cafaro,Mickey </td>
+                    <td> F </td>
+                    <td> 19.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/16/23 </td>
+                </tr>
+                <tr>
+                    <td> Cameron,Wilf </td>
+                    <td> B </td>
+                    <td> 20.0 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/04/23 </td>
+                </tr>
+                <tr>
+                    <td> Cantu,Fabian </td>
+                    <td> B </td>
+                    <td> 9.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/27/23 </td>
+                </tr>
+                <tr>
+                    <td> Caveness,Bill </td>
+                    <td> B </td>
+                    <td> 2.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/12/23 </td>
+                </tr>
+                <tr>
+                    <td> Chadwick,Don </td>
+                    <td> B </td>
+                    <td> 2.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/12/23 </td>
+                </tr>
+                <tr>
+                    <td> Ciccarello,Jim </td>
+                    <td> B </td>
+                    <td> 16.7 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/06/23 </td>
+                </tr>
+                <tr>
+                    <td> Combs,Sterling </td>
+                    <td> B </td>
+                    <td> 20.9 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/07/23 </td>
+                </tr>
+                <tr>
+                    <td> Cooper,Mickey </td>
+                    <td> B </td>
+                    <td> 7.5M </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/14/24 </td>
+                </tr>
+                <tr>
+                    <td> Cormack,Bill </td>
+                    <td> B </td>
+                    <td> 7.6 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/08/23 </td>
+                </tr>
+                <tr>
+                    <td> Corona,Al </td>
+                    <td> B </td>
+                    <td> 13.4 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 02/13/23 </td>
+                </tr>
+                <tr>
+                    <td> Courtney,Wayne </td>
+                    <td> B </td>
+                    <td> 12.0 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 09/13/23 </td>
+                </tr>
+                <tr>
+                    <td> Cox,Mike </td>
+                    <td> B </td>
+                    <td> 12.7 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/12/22 </td>
+                </tr>
+                <tr>
+                    <td> Crabill,TJ </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/11/23 </td>
+                </tr>
+                <tr>
+                    <td> Criswell,Sam </td>
+                    <td> B </td>
+                    <td> 12.5 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 06/24/20 </td>
+                </tr>
+                <tr>
+                    <td> Daneshfar,Jalil </td>
+                    <td> B </td>
+                    <td> 9.7 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 04/10/23 </td>
+                </tr>
+                <tr>
+                    <td> Davis,Kelley </td>
+                    <td> B </td>
+                    <td> 9.7 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 03/15/21 </td>
+                </tr>
+                <tr>
+                    <td> Davis,Mark </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/09/23 </td>
+                </tr>
+                <tr>
+                    <td> Dedmon,Jim </td>
+                    <td> B </td>
+                    <td> 22.0 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> DeFord,Moritz </td>
+                    <td> B </td>
+                    <td> 22.0 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/00/00 </td>
+                </tr>
+                <tr>
+                    <td> DeFrain,Garry </td>
+                    <td> B </td>
+                    <td> 22.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Denbow,David </td>
+                    <td> B </td>
+                    <td> 23.1 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/06/23 </td>
+                </tr>
+                <tr>
+                    <td> Dennis,Craig </td>
+                    <td> B </td>
+                    <td> 8.9 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 06/26/23 </td>
+                </tr>
+                <tr>
+                    <td> Diez,Hunter </td>
+                    <td> B </td>
+                    <td> 31.1 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> DiPillo,Damien </td>
+                    <td> B </td>
+                    <td> 21.7 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 05/24/23 </td>
+                </tr>
+                <tr>
+                    <td> Dorsey,Mel </td>
+                    <td> F </td>
+                    <td> 25.4 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/06/23 </td>
+                </tr>
+                <tr>
+                    <td> Dozier,Garry </td>
+                    <td> F </td>
+                    <td> 24.5 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 10/11/23 </td>
+                </tr>
+                <tr>
+                    <td> Drake,Ted </td>
+                    <td> B </td>
+                    <td> 13.0 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 07/12/23 </td>
+                </tr>
+                <tr>
+                    <td> Duckworth,Mike </td>
+                    <td> B </td>
+                    <td> 13.6 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 11/27/19 </td>
+                </tr>
+                <tr>
+                    <td> Duvall,Curtis </td>
+                    <td> B </td>
+                    <td> 14.2 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 09/13/23 </td>
+                </tr>
+                <tr>
+                    <td> Dyer,Bruce </td>
+                    <td> F </td>
+                    <td> 20.9 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 09/25/23 </td>
+                </tr>
+                <tr>
+                    <td> Echart,Jim </td>
+                    <td> B </td>
+                    <td> 11.4 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 06/27/22 </td>
+                </tr>
+                <tr>
+                    <td> Edelman,Lloyd </td>
+                    <td> F </td>
+                    <td> 33.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 05/31/23 </td>
+                </tr>
+                <tr>
+                    <td> Elwood,Judd </td>
+                    <td> F </td>
+                    <td> 24.0 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 05/01/23 </td>
+                </tr>
+                <tr>
+                    <td> Evans,Rick </td>
+                    <td> B </td>
+                    <td> 17.7 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 05/31/23 </td>
+                </tr>
+                <tr>
+                    <td> Fair,Mike </td>
+                    <td> B </td>
+                    <td> 17.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Faries,Ray </td>
+                    <td> F </td>
+                    <td> 29.1 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Feaster,Rick </td>
+                    <td> B </td>
+                    <td> 15.0 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Feild,James </td>
+                    <td> B </td>
+                    <td> 24.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Fowler,Ken </td>
+                    <td> B </td>
+                    <td> 19.3 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Gallemore,Bill </td>
+                    <td> B </td>
+                    <td> 8.4 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Gardner,Jay </td>
+                    <td> B </td>
+                    <td> 7.6M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Geary,Michael </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> George,Steve </td>
+                    <td> B </td>
+                    <td> 22.4 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Givens,Gregg </td>
+                    <td> B </td>
+                    <td> 14.8 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Goethals,Brad </td>
+                    <td> B </td>
+                    <td> 7.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Gooden,Mike </td>
+                    <td> F </td>
+                    <td> 16.0 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Goodman,Gary </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Goss,Stephen </td>
+                    <td> F </td>
+                    <td> 19.9 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Graves,Carey </td>
+                    <td> B </td>
+                    <td> 14.8 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Grim,Dwane </td>
+                    <td> B </td>
+                    <td> 8.0 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Grimes,Jim </td>
+                    <td> B </td>
+                    <td> 25.9 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Grimes,Scott </td>
+                    <td> B </td>
+                    <td> 17.2 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Hackler,Dennis </td>
+                    <td> F </td>
+                    <td> 42.0L </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Halvorson,Craig </td>
+                    <td> B </td>
+                    <td> 12.6M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Haverkorn,John </td>
+                    <td> B </td>
+                    <td> 25.4 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Heady,Rick </td>
+                    <td> B </td>
+                    <td> 16.3 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Hedrick,Walt </td>
+                    <td> B </td>
+                    <td> 13.0M </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Hickman,Robert </td>
+                    <td> B </td>
+                    <td> 17.8 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Holland,Jay </td>
+                    <td> B </td>
+                    <td> 13.0 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Holt,Don </td>
+                    <td> B </td>
+                    <td> 6.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Hyde,Robbie </td>
+                    <td> B </td>
+                    <td> 6.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Jetton,John </td>
+                    <td> B </td>
+                    <td> 21.7 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Johnson,Harold </td>
+                    <td> B </td>
+                    <td> 19.3 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Jones,Bill </td>
+                    <td> B </td>
+                    <td> 12.9M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Jones,Larry </td>
+                    <td> B </td>
+                    <td> 5.1 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Jones,Mike </td>
+                    <td> B </td>
+                    <td> 21.5 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Knight,Paul </td>
+                    <td> B </td>
+                    <td> 16.3 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Krueger,Scott </td>
+                    <td> B </td>
+                    <td> 17.7 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Krupala,John </td>
+                    <td> B </td>
+                    <td> 11.6 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Kunkel,Bob </td>
+                    <td> F </td>
+                    <td> 22.0 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Landon,Bob </td>
+                    <td> B </td>
+                    <td> 15.7 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Lane,Rick </td>
+                    <td> B </td>
+                    <td> 18.7 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Larsen,Scott </td>
+                    <td> B </td>
+                    <td> 8.4 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Latham,Zane </td>
+                    <td> B </td>
+                    <td> 14.1 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Ledel,Ted </td>
+                    <td> B </td>
+                    <td> 10.4 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> LeMay,Mark </td>
+                    <td> B </td>
+                    <td> 17.4 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Leverette,Jerry </td>
+                    <td> F </td>
+                    <td> 27.3 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Lewis,Don </td>
+                    <td> B </td>
+                    <td> 20.1 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Lindsey,Bill </td>
+                    <td> B </td>
+                    <td> 18.5 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Lord,Jim </td>
+                    <td> B </td>
+                    <td> 8.8 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Loy,David </td>
+                    <td> F </td>
+                    <td> 37.2 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Lucas,John </td>
+                    <td> F </td>
+                    <td> 24.4 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Makowka,Jerry </td>
+                    <td> B </td>
+                    <td> 15.7 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Malone,Sonny </td>
+                    <td> F </td>
+                    <td> 25.9 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> McClinton,Bill </td>
+                    <td> F </td>
+                    <td> 33.6 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> McGahee,Scotty </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> McHaney,Mike </td>
+                    <td> B </td>
+                    <td> 17.4 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Mercado,Jim </td>
+                    <td> B </td>
+                    <td> 11.1 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Mercer,Phill </td>
+                    <td> F </td>
+                    <td> 28.8 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Mershon,Jim </td>
+                    <td> F </td>
+                    <td> 20.4 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Meyers,Richard </td>
+                    <td> B </td>
+                    <td> 18.2 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Miller,Gary </td>
+                    <td> F </td>
+                    <td> 26.8 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Molberg,Steve </td>
+                    <td> B </td>
+                    <td> 15.3 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Moore,Tom </td>
+                    <td> B </td>
+                    <td> 8.5 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Morgan,Bud </td>
+                    <td> B </td>
+                    <td> 14.9 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Morrow,Sarge </td>
+                    <td> F </td>
+                    <td> 42.5L </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Morrow,Shorty </td>
+                    <td> F </td>
+                    <td> 43.9L </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Murchison,Tim </td>
+                    <td> B </td>
+                    <td> 5.4 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Newhouse,Earl </td>
+                    <td> F </td>
+                    <td> 19.8 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Nguyen,Vinh </td>
+                    <td> B </td>
+                    <td> 7.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Nondorf,Roger </td>
+                    <td> B </td>
+                    <td> 13.0M </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Odneal,Curt </td>
+                    <td> B </td>
+                    <td> 17.5 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Panice,Ron </td>
+                    <td> B </td>
+                    <td> 15.3 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Parham,Van </td>
+                    <td> B </td>
+                    <td> 24.1 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Partain,Pete </td>
+                    <td> B </td>
+                    <td> 17.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Peach,Jon </td>
+                    <td> F </td>
+                    <td> 17.0 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Peel,Phillip </td>
+                    <td> B </td>
+                    <td> 11.3 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Pierson,John </td>
+                    <td> B </td>
+                    <td> 21.4 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Portley,Gene </td>
+                    <td> B </td>
+                    <td> 14.8 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Portley,John </td>
+                    <td> B </td>
+                    <td> 20.2 </td>
+                    <td> C </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Prince,Lynn </td>
+                    <td> F </td>
+                    <td> 12.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Rampy,Troy </td>
+                    <td> B </td>
+                    <td> 12.7 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Rapp,Larry </td>
+                    <td> B </td>
+                    <td> 20.6 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Rhone,Doug </td>
+                    <td> B </td>
+                    <td> 5.5 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Ringle,Tony </td>
+                    <td> B </td>
+                    <td> 10.9 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Robinson,Stephen </td>
+                    <td> B </td>
+                    <td> 25.6 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Rousey,Keith </td>
+                    <td> F </td>
+                    <td> 30.0 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Rugg,Jerry </td>
+                    <td> B </td>
+                    <td> 8.0 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Ruth,Rob </td>
+                    <td> B </td>
+                    <td> 5.1 </td>
+                    <td> 1CH </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Samuel,Garner </td>
+                    <td> F </td>
+                    <td> 29.0 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Seeley,Glenn </td>
+                    <td> B </td>
+                    <td> 16.0 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Sexton,Kirk </td>
+                    <td> B </td>
+                    <td> 16.0 </td>
+                    <td> A </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Skeesick,Gary </td>
+                    <td> F </td>
+                    <td> 24.0 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Smith,Darrah </td>
+                    <td> B </td>
+                    <td> 14.4 </td>
+                    <td> A </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Smith,J.R. </td>
+                    <td> F </td>
+                    <td> 0.0M </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Smith,Lawrence </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Stathis,Rick </td>
+                    <td> F </td>
+                    <td> 36.7 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Stillwell,Bill </td>
+                    <td> F </td>
+                    <td> 14.4 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 08/16/23 </td>
+                </tr>
+                <tr>
+                    <td> Stitt,Rob </td>
+                    <td> B </td>
+                    <td> 16.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Stokes,Mark </td>
+                    <td> B </td>
+                    <td> 19.0 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Swiatek,Ed </td>
+                    <td> F </td>
+                    <td> 21.7 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Swiggett,Vernon </td>
+                    <td> B </td>
+                    <td> 11.8 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Tartaglia,Daniel </td>
+                    <td> B </td>
+                    <td> 11.8 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Thorpe,Thomas </td>
+                    <td> F </td>
+                    <td> 15.6 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Turner,Alan </td>
+                    <td> F </td>
+                    <td> 0.0M </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Vinson,Bob </td>
+                    <td> B </td>
+                    <td> 22.7 </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Watkins,Curtis </td>
+                    <td> B </td>
+                    <td> 10.1 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Watkins,Mike </td>
+                    <td> B </td>
+                    <td> 16.1 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Weiss,Bill </td>
+                    <td> F </td>
+                    <td> 40.6L </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wells,Rod </td>
+                    <td> B </td>
+                    <td> 15.6 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Westbrook,Bob </td>
+                    <td> B </td>
+                    <td> 15.6 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Whitver,Richard </td>
+                    <td> B </td>
+                    <td> 9.3M </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Wilkinson,Mark </td>
+                    <td> B </td>
+                    <td> 17.9 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Williams,Sid </td>
+                    <td> B </td>
+                    <td> 26.6 </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wilson,Johnny </td>
+                    <td> B </td>
+                    <td> 11.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Winters,Stephen </td>
+                    <td> B </td>
+                    <td> 17.5M </td>
+                    <td> C </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Woertendyke,Randy </td>
+                    <td> B </td>
+                    <td> 0.0M </td>
+                    <td> B </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wolfe,Curtis </td>
+                    <td> B </td>
+                    <td> 9.7 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wolfe,Max </td>
+                    <td> F </td>
+                    <td> 19.8 </td>
+                    <td> D </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wolfe,Patrick </td>
+                    <td> B </td>
+                    <td> 8.8 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wollenman,Tim </td>
+                    <td> B </td>
+                    <td> 7.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 01/10/24 </td>
+                </tr>
+                <tr>
+                    <td> Wood,David </td>
+                    <td> F </td>
+                    <td> 30.2 </td>
+                    <td> E </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Wood,Tom </td>
+                    <td> B </td>
+                    <td> 11.2 </td>
+                    <td> 1CH </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> York,Jim </td>
+                    <td> B </td>
+                    <td> 15.8 </td>
+                    <td> B </td>
+                    <td> Y </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+                <tr>
+                    <td> Zimmerman,Granville </td>
+                    <td> F </td>
+                    <td> 20.9 </td>
+                    <td> D </td>
+                    <td> Y </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> CR </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- Code injected by live-server -->
+        <script>
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
+
+        <script>
+
+            function searchTable(tableId, value) {
+                const filter = value.toLowerCase()
+                const table = document.getElementById(tableId)
+                const rows = table.getElementsByTagName('tr')
+
+                for (let i = 1; i < rows.length; i++) { // skip first row as this is the header row
+                    const row = rows[i]
+                    let cols = Array.from(row.getElementsByTagName('td'))
+                    cols = cols.concat(Array.from(row.getElementsByTagName('th')))
+
+                    let shouldHide = true
+
+                    cols.forEach(col => {
+                        const text = col.innerText
+                        if (text.toLowerCase().indexOf(filter) > -1) {
+                            shouldHide = false
+                        }
+                    })
+
+                    if (shouldHide) {
+                        row.style.display = 'none'
+                    } else {
+                        row.style.display = ''
+                    }
+                }
+            }
+
+
+            function sortTable(tableId, col, type) {
+                const table = document.getElementById(tableId)
+                const rows = table.rows
+
+                let sorting = true
+
+                while (sorting) {
+                    sorting = false
+
+                    for (let i = 1; i < rows.length - 1; i++) {
+                        let swap = false
+                        let x = rows[i].querySelectorAll('th, td')[col]
+                        let y = rows[i + 1].querySelectorAll('th, td')[col]
+
+                        if (x.dataset.sortValue) {
+                            x = x.dataset.sortValue
+                            y = y.dataset.sortValue
+                        } else {
+                            x = x.innerHTML
+                            y = y.innerHTML
+                        }
+
+                        if (type === 'number') {
+                            x = Number(x)
+                            y = Number(y)
+                        }
+
+                        if (x > y) {
+                            swap = true
+                        }
+
+                        if (swap) {
+                            rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+                            sorting = true
+                        }
+                    }
+                }
+            }
+
+
+            function reverseTable(tableId) {
+                const table = document.getElementById(tableId)
+                const rows = table.rows
+                const lastRow = rows.length - 1
+
+                for (let i = 1; i < rows.length; i++) {
+                    rows[i].parentNode.insertBefore(rows[lastRow], rows[i])
+                }
+            }
+
+            function getHeaders(table) {
+                const head = table.getElementsByTagName('thead')[0]
+                return Array.from(head.getElementsByTagName('th'))
+            }
+
+            function addSortListeners(tables) {
+                tables.forEach(table => {
+                    const headers = getHeaders(table)
+                    const tableId = table.id
+
+                    for (let i = 0; i < headers.length; i++) {
+                        const header = headers[i]
+                        const columnNo = i
+                        let sortType
+
+                        if (header.dataset.type) {
+                            sortType = header.dataset.type
+                        } else {
+                            sortType = ''
+                        }
+
+                        header.addEventListener('click', (event) => {
+                            const target = event.target
+                            const sorted = (target.dataset.sorted === 'true')
+
+                            if (sorted) {
+                                reverseTable(tableId)
+                                const arrow = target.getElementsByTagName('span')[0]
+                                if (arrow.innerHTML === '↑') {
+                                    arrow.innerHTML = '↓'
+                                } else {
+                                    arrow.innerHTML = '↑'
+                                }
+                            } else {
+                                headers.forEach(header2 => {
+                                    const arrow = header2.getElementsByTagName('span')[0]
+                                    if (arrow) {
+                                        if (header2.dataset.sorted === 'true') {
+                                            arrow.innerHTML = '•'
+                                        } else {
+                                            arrow.innerHTML = ''
+                                        }
+                                    } else {
+                                        header2.innerHTML += '<span></span>'
+                                    }
+                                    header2.dataset.sorted = false
+                                })
+
+                                sortTable(tableId, columnNo, sortType)
+                                target.dataset.sorted = true
+                                target.getElementsByTagName('span')[0].innerHTML = '↑'
+                            }
+                        })
+                    }
+                })
+            }
+
+            const TABLES = Array.from(document.getElementsByClassName('sortTable'))
+
+            addSortListeners(TABLES)
+
+
+            function addSearchListeners(inputs) {
+                inputs.forEach(input => {
+                    input.addEventListener('input', (event) => {
+                        const target = event.target
+                        const targetTableId = target.dataset.tableId
+                        const value = target.value
+                        searchTable(targetTableId, value)
+                    })
+                })
+            }
+
+            const searchInputs = Array.from(document.getElementsByClassName('searchInput'))
+
+            addSearchListeners(searchInputs)
+        </script>
+
+</body>
+
+</html>
